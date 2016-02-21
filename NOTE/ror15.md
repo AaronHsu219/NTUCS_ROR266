@@ -8,23 +8,23 @@
     * User 與 Video 是一對多關係
     * Category 與 Video 是多對多關係
 * 建立 videos 資料表：
-```ruby
-  rails g migration add_videos_table
+```
+rails g migration add_videos_table
 ```
 ```ruby
-  class AddVideosTable < ActiveRecord::Migration
-    def change
-      create_table :videos do |t|
-        t.string :title
-        t.text   :description
+class AddVideosTable < ActiveRecord::Migration
+  def change
+    create_table :videos do |t|
+      t.string :title
+      t.text   :description
 
-        t.timestamp
-      end
+      t.timestamp
     end
   end
+end
 ```    
 * 建立 Categories 資料表：
-```ruby
+```
     rails g migration add_categories_table
 ```
 ```ruby
